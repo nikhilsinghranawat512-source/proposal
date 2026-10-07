@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Forever Story ❤️</title>
+  <!-- Luxury Editorial & Romantic Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-light-brinjal">
+
+  <!-- Atmospheric Starlight, Soft Brinjal Orbs & Confetti Canvas -->
+  <div class="atmosphere-layer" aria-hidden="true">
+    <div class="candle-orb orb-gold-1"></div>
+    <div class="candle-orb orb-rosegold-2"></div>
+    <div class="candle-orb orb-velvet-3"></div>
+    <canvas id="starlightCanvas"></canvas>
+    <div id="confettiStage" class="confetti-stage"></div>
+  </div>
+
+  <!-- Top Desktop & Mobile Chapter Navigation Bar -->
+  <header class="top-nav-bar">
+    <div class="brand-emblem" id="brandEmblem">
+      <span class="emblem-monogram">A♥N</span>
+      <div class="brand-titles">
+        <span class="brand-main">Nikhil  &amp; Avantika</span>
+        <span class="brand-sub">Our Forever Story</span>
+      </div>
+    </div>
+
+    <nav class="chapter-stepper" aria-label="Story Chapters">
+      <button class="chapter-tab active" data-chapter="1" type="button">
+        <span class="chapter-num">I</span>
+        <span class="chapter-label">How It Began</span>
+      </button>
+      <span class="step-divider"></span>
+      <button class="chapter-tab" data-chapter="2" type="button">
+        <span class="chapter-num">II</span>
+        <span class="chapter-label">Moments We Cherished</span>
+      </button>
+      <span class="step-divider"></span>
+      <button class="chapter-tab" data-chapter="3" type="button">
+        <span class="chapter-num">III</span>
+        <span class="chapter-label">A Question For You</span>
+      </button>
+      <span class="step-divider"></span>
+      <button class="chapter-tab" data-chapter="4" type="button">
+        <span class="chapter-num">IV</span>
+        <span class="chapter-label">She Said Yes!</span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="story-viewport">
+
+    <!-- =======================================================================
+         CHAPTER 1: THE DAY MY WORLD CHANGED (Our Chapter 1 - How It Began)
+         ======================================================================= -->
+    <section id="chapter1" class="chapter-screen active" aria-labelledby="ch1-heading">
+      <div class="chapter-header-block">
+        <span class="chapter-eyebrow">✦ Our Chapter I • Avantika &amp; Nikhil ✦</span>
+        <h1 id="ch1-heading" class="editorial-title">The Day My World Changed</h1>
+        <p class="editorial-subtitle">
+          Before you, Avantika, days were simply pages turning on a calendar. After you, every single second became a story worth keeping.
+        </p>
+      </div>
+
+      <!-- Desktop Two-Column Showcase: Watercolor Illustration + Live Counter & Intimate Letter -->
+      <div class="chapter1-grid">
+
+        <!-- Left Column: Couple's Watercolor Illustration & Live Days Counter -->
+        <div class="ch1-visual-column">
+          <div class="watercolor-frame-card">
+            <div class="frame-corner tl"></div>
+            <div class="frame-corner tr"></div>
+            <div class="frame-corner bl"></div>
+            <div class="frame-corner br"></div>
+
+            <div class="watercolor-image-wrap">
+              <img id="heroWatercolorImg" src="assets/couple-watercolor.jpg" alt="Avantika and Nikhil under warm starlight lanterns" class="watercolor-img" />
+              <div class="watercolor-vignette"></div>
+            </div>
+
+            <div class="artwork-caption">
+              <span class="script-accent">Under a sky of a billion stars, my eyes only ever looked for you, Nepalan.</span>
+            </div>
+          </div>
+
+          <!-- Days We've Loved Counter -->
+          <div class="love-counter-card">
+            <div class="counter-header">
+              <span class="counter-title">⏳ Days We've Loved Counter</span>
+              <span class="counter-since" id="counterSinceLabel">Avantika &amp; Nikhil</span>
+            </div>
+
+            <div class="counter-metrics-grid">
+              <div class="metric-box">
+                <span class="metric-value" id="daysLovedVal">1,095</span>
+                <span class="metric-unit">Days</span>
+              </div>
+              <div class="metric-box">
+                <span class="metric-value" id="hoursLovedVal">26,280</span>
+                <span class="metric-unit">Hours</span>
+              </div>
+              <div class="metric-box">
+                <span class="metric-value" id="minutesLovedVal">18</span>
+                <span class="metric-unit">Minutes</span>
+              </div>
+              <div class="metric-box">
+                <span class="metric-value" id="secondsLovedVal">42</span>
+                <span class="metric-unit">Seconds</span>
+              </div>
+            </div>
+
+            <div class="heartbeat-ticker-bar">
+              <span class="pulsing-heart-icon">💓</span>
+              <span class="heartbeat-label">
+                <strong id="heartbeatsCountVal">110,501,240</strong> heartbeats shared — and counting into infinity
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Intimate Love Letter & Interactive Rose-Gold Wax Seal -->
+        <div class="ch1-letter-column">
+          <div class="journal-letter-card" id="journalLetterCard">
+            <div class="journal-top-ornament">❦ INTIMATE JOURNAL ENTRY FOR AVANTIKA ❦</div>
+
+            <!-- Interactive Wax Seal Overlay (Unseals on click) -->
+            <div class="wax-seal-gate" id="waxSealGate">
+              <p class="seal-instruction">Written only for Avantika</p>
+              <button id="breakWaxSealBtn" class="rosegold-wax-seal" type="button" aria-label="Break Rose-Gold Wax Seal to Read Letter">
+                <span class="seal-outer-ring"></span>
+                <span class="seal-inner-monogram">A♥N</span>
+              </button>
+              <span class="seal-cta-hint">Click the Emblem to Unseal My Letter ✨</span>
+            </div>
+
+            <!-- Unsealed Love Letter Content -->
+            <div class="letter-manuscript" id="letterManuscript">
+              <div class="letter-date-line" id="letterDateLine">From Nikhil’s Heart to Yours</div>
+              <h2 class="letter-salutation" id="letterSalutation">My Nepalan Avantika,</h2>
+
+              <div class="letter-body-paragraphs" id="letterBodyContent">
+                <p>
+                  Do you remember the very first day our paths crossed? I didn’t know it then, but the universe had just quietly rewritten my entire future in a single heartbeat.
+                </p>
+                <p>
+                  What started as simple conversations and shy smiles slowly became the anchor of my days. With you, Avantika, quiet silences feel like music, ordinary evenings feel like celebrations, and every tomorrow feels like a promise I can’t wait to keep.
+                </p>
+                <p>
+                  Before I ask you the biggest question of my life tonight, walk with me through the moments that brought us here…
+                </p>
+              </div>
+
+              <div class="letter-signature-row">
+                <div class="signature-block">
+                  <span class="forever-yours">Forever &amp; Always Yours,</span>
+                  <span class="signature-script" id="senderSignature">Nikhil Singh</span>
+                </div>
+                <div class="mini-emblem-stamp" title="Avantika & Nikhil Emblem">A ♥ N</div>
+              </div>
+
+              <div class="chapter-nav-footer">
+                <button class="btn-luxury-gold" data-goto="2" type="button">
+                  <span>Turn the Page: Moments We Cherished</span>
+                  <span class="arrow">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CHAPTER 2: MOMENTS WE CHERISHED (Moments We Cherished)
+         ======================================================================= -->
+    <section id="chapter2" class="chapter-screen" aria-labelledby="ch2-heading">
+      <div class="chapter-header-block">
+        <span class="chapter-eyebrow">✦ Our Chapter II • Avantika &amp; Nikhil ✦</span>
+        <h1 id="ch2-heading" class="editorial-title">Moments We Cherished</h1>
+        <p class="editorial-subtitle">
+          A collection of our treasured milestones and the thousand little ways you make me fall deeper every single day, Avantika.
+        </p>
+      </div>
+
+      <!-- 1. Interactive Memory Timeline: 4 Nostalgic Milestone Polaroids -->
+      <div class="section-sub-header">
+        <h2 class="section-heading-serif">📸 Interactive Memory Timeline</h2>
+        <p class="section-hint">Click any polaroid to spotlight the memory written on it</p>
+      </div>
+
+      <div class="polaroid-timeline-grid">
+
+        <!-- Polaroid 1: The First Hello -->
+        <article class="polaroid-card" data-polaroid="1">
+          <div class="polaroid-inner">
+            <div class="polaroid-art art-first-hello" id="polaroidImg1">
+              <div class="polaroid-scene-overlay">
+                <span class="scene-emoji">✨☕🌸</span>
+                <span class="scene-tag">Milestone #01</span>
+              </div>
+            </div>
+            <div class="polaroid-caption-area">
+              <h3 class="polaroid-title">Your First Photo</h3>
+              <p class="polaroid-date">Where Avantika &amp; Nikhil Began</p>
+              <p class="polaroid-back-note">
+                “When I asked you for a photo for the first time, you sent me this exact photo. I really liked it, so this one is very special to me”
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Polaroid 2: Stargazing until 3 AM -->
+        <article class="polaroid-card" data-polaroid="2">
+          <div class="polaroid-inner">
+            <div class="polaroid-art art-stargazing" id="polaroidImg2">
+              <div class="polaroid-scene-overlay">
+                <span class="scene-emoji">🌌🌙✨</span>
+                <span class="scene-tag">Milestone #02</span>
+              </div>
+            </div>
+            <div class="polaroid-caption-area">
+              <h3 class="polaroid-title">Nepalan</h3>
+              <p class="polaroid-date">When I Saw this photo</p>
+              <p class="polaroid-back-note">
+"I love your anger—it actually looks cute on you. Keep being that way, just don’t overdo it. ❤️"              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Polaroid 3: Road trip getaways -->
+        <article class="polaroid-card" data-polaroid="3">
+          <div class="polaroid-inner">
+            <div class="polaroid-art art-roadtrip" id="polaroidImg3">
+              <div class="polaroid-scene-overlay">
+                <span class="scene-emoji">🚗🌅🎶</span>
+                <span class="scene-tag">Milestone #03</span>
+              </div>
+            </div>
+            <div class="polaroid-caption-area">
+              <h3 class="polaroid-title">Fav one Photo</h3>
+              <p class="polaroid-date">I an using this photo for Wallpaper</p>
+              <p class="polaroid-back-note">
+"I’d love to set this photo as my wallpaper… once you say yes. ❤️"              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Polaroid 4: Cozy rainy coffee mornings -->
+        <article class="polaroid-card" data-polaroid="4">
+          <div class="polaroid-inner">
+            <div class="polaroid-art art-rainy-coffee" id="polaroidImg4">
+              <div class="polaroid-scene-overlay">
+                <span class="scene-emoji">🌧️☕🧣</span>
+                <span class="scene-tag">Milestone #04</span>
+              </div>
+            </div>
+            <div class="polaroid-caption-area">
+              <h3 class="polaroid-title">My Wish</h3>
+              <p class="polaroid-date">My Dream Dating Spot</p>
+              <p class="polaroid-back-note">
+"I’d love to meet you at this place when I meet you for the first time. ❤️"              </p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- 2. "Reasons I Fall Deeper Every Day" Full-Width Showcase -->
+      <div class="reasons-showcase-card">
+        <div class="reasons-header">
+          <span class="keepsake-pill">💖 EVERY SINGLE DAY</span>
+          <h3 class="reasons-main-title">Reasons I Fall Deeper For You, Avantika</h3>
+        </div>
+
+        <div class="reasons-cards-grid">
+
+          <div class="reason-item-card" tabindex="0">
+            <div class="reason-icon-wrap">✨</div>
+            <div class="reason-text-wrap">
+              <h4>Your Radiant Laughter</h4>
+              <p>
+                The way your eyes crinkle when you laugh uncontrollably—it is my favorite sound in the entire world and turns my heaviest days into pure light.
+              </p>
+            </div>
+          </div>
+
+          <div class="reason-item-card" tabindex="0">
+            <div class="reason-icon-wrap">🕊️</div>
+            <div class="reason-text-wrap">
+              <h4>Your Boundless Kindness</h4>
+              <p>
+                The gentle, thoughtful way you love the people around you. Your heart is the softest, most extraordinary place I have ever known.
+              </p>
+            </div>
+          </div>
+
+          <div class="reason-item-card" tabindex="0">
+            <div class="reason-icon-wrap">🌅</div>
+            <div class="reason-text-wrap">
+              <h4>Your Morning Smile</h4>
+              <p>
+                That warm, sleepy smile before the world wakes up. Looking at you in the morning makes me grateful for every sunrise we get to share.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="chapter-nav-footer center-footer">
+        <button class="btn-luxury-gold btn-large-glow" data-goto="3" type="button">
+          <span>Step Into Candlelight: A Question For Avantika</span>
+          <span class="arrow">✨ →</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CHAPTER 3: THE PROPOSAL — "A QUESTION FOR YOU" (Will You Marry Me?)
+         ======================================================================= -->
+    <section id="chapter3" class="chapter-screen" aria-labelledby="ch3-heading">
+      <div class="chapter-header-block">
+        <span class="chapter-eyebrow">✦ Our Chapter III • Nikhil To Avantika ✦</span>
+        <h1 id="ch3-heading" class="editorial-title">A Question For You</h1>
+        <p class="editorial-subtitle">
+          Every chapter we have written together has been leading to this single, breathless moment.
+        </p>
+      </div>
+
+      <div class="proposal-climax-stage">
+
+        <!-- Centerpiece Velvet Ring Box with Interactive 3D Lid -->
+        <div class="velvet-box-sanctuary" id="velvetBoxSanctuary">
+          <div class="candlelight-halo"></div>
+
+          <div class="velvet-ring-box" id="velvetRingBox" role="button" tabindex="0" aria-label="Click to open my heart and reveal the ring">
+            <!-- Box Lid -->
+            <div class="box-lid">
+              <div class="lid-crest">A♥N</div>
+            </div>
+
+            <!-- Glowing Diamond Ring Revealed Inside -->
+            <div class="ring-reveal-chamber">
+              <div class="diamond-starburst"></div>
+              <svg class="diamond-ring-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Sparkling Rays -->
+                <path class="sparkle-ray" d="M60 6L63 20L77 23L63 26L60 40L57 26L43 23L57 20L60 6Z" fill="#9333EA"/>
+                <!-- Diamond Gem -->
+                <polygon points="60,22 78,34 60,56 42,34" fill="url(#diamondGrad)" stroke="#7E22CE" stroke-width="1.5"/>
+                <polygon points="42,34 78,34 70,24 50,24" fill="#F3E8FF" opacity="0.9"/>
+                <polyline points="50,24 60,34 70,24" stroke="#9333EA" stroke-width="1.2"/>
+                <polyline points="42,34 60,34 78,34" stroke="#9333EA" stroke-width="1.2"/>
+                <line x1="60" y1="34" x2="60" y2="56" stroke="#9333EA" stroke-width="1.2"/>
+                <!-- Rose-Gold Prongs & Band -->
+                <circle cx="60" cy="78" r="26" stroke="url(#roseGoldBand)" stroke-width="7" fill="none"/>
+                <circle cx="60" cy="78" r="22.5" stroke="#FFF5E1" stroke-width="1" opacity="0.7" fill="none"/>
+                <defs>
+                  <linearGradient id="diamondGrad" x1="42" y1="22" x2="78" y2="56" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#FFFFFF"/>
+                    <stop offset="50%" stop-color="#F3E8FF"/>
+                    <stop offset="100%" stop-color="#D8B4FE"/>
+                  </linearGradient>
+                  <linearGradient id="roseGoldBand" x1="34" y1="52" x2="86" y2="104" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#D4AF37"/>
+                    <stop offset="50%" stop-color="#E8B4B8"/>
+                    <stop offset="100%" stop-color="#B45309"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <!-- Box Base -->
+            <div class="box-base">
+              <div class="velvet-cushion"></div>
+              <span class="box-plaque">AVANTIKA &amp; NIKHIL</span>
+            </div>
+          </div>
+
+          <button id="openHeartPromptBtn" class="open-heart-prompt" type="button">
+            <span class="sparkle-dot">✨</span>
+            <span id="openHeartPromptText">Click to open my heart</span>
+            <span class="sparkle-dot">✨</span>
+          </button>
+        </div>
+
+        <!-- Grand Proposal Question & Romantic Promises (Revealed when Velvet Box opens) -->
+        <div class="grand-proposal-reveal" id="grandProposalReveal">
+          <p class="proposal-prelude">
+            Avantika, with all that I am, and all that I will ever be…
+          </p>
+
+          <h2 class="grand-question-title">
+            “Will You be My GirlFriend ?”
+          </h2>
+
+          <!-- Romantic Vows / Promises -->
+          <div class="romantic-promises-row">
+            <div class="promise-pill">🕯️ I promise to be your safe harbor in every storm</div>
+            <div class="promise-pill">✨ I promise to celebrate your dreams as my own</div>
+            <div class="promise-pill">♾️ I promise to choose you, every single morning, forever</div>
+          </div>
+
+          <!-- Playful & Sweet Response Banner -->
+          <div id="proposalFeedbackBanner" class="proposal-feedback-banner" aria-live="polite">
+            Take my hand, Avantika, and let’s begin our forever tonight… 💍
+          </div>
+
+          <!-- Playful & Sweet Response Buttons -->
+          <div class="proposal-decision-arena" id="proposalDecisionArena">
+            <button id="millionTimesYesBtn" class="btn-million-yes" type="button">
+              <span>YES! A Million Times Yes! 💍</span>
+            </button>
+
+            <button id="playfulWaitBtn" class="btn-playful-wait" type="button">
+              <span>Wait, let me catch my breath 🥺</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CHAPTER 4: FOREVER KEEPSAKE — "SHE SAID YES!" (Forever Keepsake)
+         ======================================================================= -->
+    <section id="chapter4" class="chapter-screen" aria-labelledby="ch4-heading">
+      <div class="chapter-header-block celebration-header">
+        <div class="toast-announcement-pill">🥂✨ CHAMPAGNE TOAST • AVANTIKA &amp; NIKHIL ✨🥂</div>
+        <h1 id="ch4-heading" class="editorial-title gold-shimmer-title">She Said Yes!</h1>
+        <p class="editorial-subtitle">
+          Raise a glass to the beginning of forever for Avantika &amp; Nikhil. Two hearts, one shared destiny, and a lifetime of chapters yet to be written.
+        </p>
+        <div class="toast-actions-row">
+          <button id="popChampagneBtn" class="btn-champagne-toast" type="button">
+            🥂 Pop the Champagne &amp; Shower Confetti!
+          </button>
+        </div>
+      </div>
+
+      <!-- Joyful Countdown to Exchanging Vows -->
+      <div class="vows-countdown-banner">
+        <div class="vows-banner-left">
+          <span class="vows-eyebrow">💍 COUNTDOWN TO EXCHANGING VOWS</span>
+          <h2 class="vows-title">Until Avantika &amp; Nikhil Say “I Do”</h2>
+        </div>
+        <div class="vows-timer-boxes">
+          <div class="vow-unit">
+            <span id="vowDays">365</span>
+            <small>Days</small>
+          </div>
+          <div class="vow-unit">
+            <span id="vowHours">14</span>
+            <small>Hours</small>
+          </div>
+          <div class="vow-unit">
+            <span id="vowMinutes">32</span>
+            <small>Minutes</small>
+          </div>
+          <div class="vow-unit">
+            <span id="vowSeconds">19</span>
+            <small>Seconds</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Two-Column Keepsakes: Official Milestone Ticket + Secret Time Capsule -->
+      <div class="chapter4-keepsake-grid">
+
+        <!-- 1. Proposal Acceptance Certificate (“💖 OFFICIAL LOVE CERTIFICATE 💖”) -->
+        <div class="love-certificate-wrapper">
+          <article class="love-certificate-card" id="milestoneTicketCard" aria-label="Official Love Certificate">
+            <!-- Subtle Floral & Heart Corner Accents -->
+            <span class="cert-corner-decor top-left" aria-hidden="true">🌸 💕</span>
+            <span class="cert-corner-decor top-right" aria-hidden="true">💕 🌸</span>
+            <span class="cert-corner-decor bottom-left" aria-hidden="true">🌷 ✨</span>
+            <span class="cert-corner-decor bottom-right" aria-hidden="true">✨ 🌷</span>
+
+            <div class="cert-inner-frame">
+              <div class="cert-floating-hearts" aria-hidden="true">
+                <span>💗</span><span>✨</span><span>💖</span><span>✨</span><span>💗</span>
+              </div>
+
+              <h3 class="cert-main-title">💖 OFFICIAL LOVE CERTIFICATE 💖</h3>
+              <div class="cert-divider-ornament" aria-hidden="true">─── ❖ ♥ ❖ ───</div>
+
+              <p class="cert-body-text">
+                This certificate proudly confirms that
+                <span class="cert-highlight-name" id="certHerName">Avantika</span>
+                has officially accepted
+                <span class="cert-highlight-name"><span id="certHisName">Nikhil Singh</span>’s</span> proposal
+                and agreed to be a beautiful part of his love story. ❤️
+              </p>
+
+              <div class="cert-status-pill">
+                Proposal Status: <strong>ACCEPTED 💍✨</strong>
+              </div>
+
+              <div class="cert-footer-meta">
+                <div class="cert-meta-item">
+                  <span class="cert-meta-label">Date:</span>
+                  <span class="cert-meta-val" id="ticketDateVal">October 7, 2026</span>
+                </div>
+                <div class="cert-seal-emblem" title="Official Love Seal">
+                  <span>A ♥ N</span>
+                </div>
+                <div class="cert-meta-item">
+                  <span class="cert-meta-label">From:</span>
+                  <span class="cert-meta-val cert-signature" id="certFromName">Nikhil </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="cert-action-bar">
+            <button id="downloadCertImgBtn" class="btn-ticket-action" type="button">
+              💾 Download Certificate (PNG)
+            </button>
+            <button id="printKeepsakeBtn" class="btn-ticket-action" type="button">
+              🖨️ Print Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Secret Time Capsule -->
+        <div class="time-capsule-card">
+          <div class="capsule-header">
+            <span class="keepsake-pill">🕰️ SECRET TIME CAPSULE</span>
+            <span class="capsule-lock-status" id="capsuleStatusBadge">🔓 Ready for Avantika’s Words</span>
+          </div>
+
+          <h3 class="capsule-title">A Note to Our Future Selves</h3>
+          <p class="capsule-desc">
+            Avantika, write down your exact feelings in this very moment. Seal it inside our digital time capsule to look back on on our wedding night and anniversaries forever.
+          </p>
+
+          <div class="capsule-editor-wrap" id="capsuleEditorWrap">
+            <textarea
+              id="timeCapsuleTextarea"
+              class="capsule-textarea"
+              rows="5"
+              placeholder="Write what is in your heart right now, Avantika… (e.g., My hands are still shaking, my heart is overflowing, and I can't wait to marry you, Nikhil! ❤️)"
+            ></textarea>
+
+            <div class="capsule-actions-row">
+              <button id="sealCapsuleBtn" class="btn-luxury-gold" type="button">
+                <span>🔒 Seal in Avantika &amp; Nikhil’s Time Capsule</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Sealed Time Capsule Display -->
+          <div class="capsule-sealed-view" id="capsuleSealedView" hidden>
+            <div class="sealed-emblem-icon">💌</div>
+            <h4 class="sealed-heading">Sealed by Avantika for Nikhil</h4>
+            <p class="sealed-timestamp" id="sealedTimestampText">Sealed on October 7, 2026</p>
+            <blockquote class="sealed-message-preview" id="sealedMessagePreview"></blockquote>
+            <div class="sealed-buttons-row">
+              <button id="downloadCapsuleBtn" class="btn-ticket-action" type="button">
+                💾 Download Keepsake Note
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
